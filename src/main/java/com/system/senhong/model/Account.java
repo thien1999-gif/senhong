@@ -11,8 +11,8 @@ import javax.persistence.Table;
 @Table(name = "account")
 public class Account {
 	@Id
-	@Column(name = "user_iD")
-	private String user_iD;
+	@Column(name = "user_id")
+	private String user_id;
 
 	@Column(name = "first_name")
 	private String first_name;
@@ -41,13 +41,17 @@ public class Account {
 	@Column(name = "address")
 	private String address;
 
-	public String getUser_iD() {
-		return user_iD;
+
+
+	public String getUser_id() {
+		return user_id;
 	}
 
-	public void setUser_iD(String user_iD) {
-		this.user_iD = user_iD;
+	public void setUser_id(String user_id) {
+		this.user_id = user_id;
 	}
+
+	
 
 	public String getFirst_name() {
 		return first_name;
@@ -124,5 +128,24 @@ public class Account {
 	public Account() {
 
 	}
+
+	public Account(String user_id, String first_name, String last_name, String mobile, String email, String password,
+			int admin, int vendor, Date date_of_birth, String address) {
+		super();
+		this.user_id = user_id;
+		this.first_name = first_name;
+		this.last_name = last_name;
+		this.mobile = mobile;
+		this.email = email;
+		this.password = password;
+		this.admin = admin;
+		this.vendor = vendor;
+		this.date_of_birth = date_of_birth;
+		this.address = address;
+	}
+
+	
+
+	
 
 }
